@@ -4,26 +4,27 @@ Este documento detalla la estrategia para tomar un local veterinario subutilizad
 
 ## 0. La Unfair Advantage (El Equipo Fundador)
 La fortaleza de esta clínica radica en el triángulo de los socios:
-*   **Alfonso:** Inyección de capital y resguardo financiero. Logró negociar **3 meses de gracia** en el arriendo, lo que reduce el estrés de caja inicial a casi cero.
+*   **Alfonso (El Capital Inversor):** Inyección de capital y resguardo financiero. Logró negociar **3 meses de gracia** en el arriendo, lo que reduce el estrés de caja inicial a casi cero. A partir del Mes 4, el arriendo subirá a ~$700.000 y la meta al Año 1 es de $1.000.000. Además, luego del primer año, se estructurará el pago de **Retorno de Inversión (ROI) + Porcentaje acordado** sobre el capital inyectado.
 *   **Daniela:** Doctora, cirujana y anestesista con experiencia previa como dueña de clínica. Supervisará los protocolos médicos, compras de equipos y reclutamiento del talento (evitando cuellos de botella operativos).
 *   **Sasha:** Data Science y Automatizaciones. En lugar de delegar el marketing a ciegas, inyectará sistemas automatizados (n8n/Shopify) y campañas hiper-optimizadas con el apoyo de su pareja especialista, garantizando que cada peso invertido sea medible.
 
 ## 1. Diagnóstico Financiero Realista (La Línea de Flotación)
 Olvídate de buscar 400 pacientes el Mes 1. Asumiremos una "Fuga por Transición de Marca" y un escenario **Ajustado (Lean)** para garantizar supervivencia con bajo volumen.
 
-**Costos Fijos Iniciales (Mes 1 a 3):**
-*   Arriendo: $0 (Periodo de gracia)
+**Costos Fijos Iniciales Sincerados (Mes 1 a 3):**
+*   Arriendo: $0 (Periodo de gracia, luego $700.000 al Mes 4)
 *   Daniela (Veterinario/Cirujano/Anestesista - Sueldo de Supervivencia) Full-Time: ~$1.200.000
 *   1 Técnico Full-Time: ~$600.000
 *   Sasha (recepcionMarketing/Data - Sueldo de Supervivencia)Full-Time: ~$800.000
 *   Ecosistema Tecnológico e Internet (PMS, POS, n8n, Hosting): ~$140.000
-*   Operación e Insumos Fijos: ~$400.000
-*   **TOTAL LÍNEA DE FLOTACIÓN:** **~$3.140.000 CLP / mes**
-*(A partir del Mes 4, se asume el arriendo de ~$1.000.000, subiendo el fijo a $4.14M).*
+*   Insumos / Inventario Histórico: ~$1.140.000 (Dato real extraído del promedio 2024 de facturas de compras)
+*   Suministros Básicos (Luz, Agua): ~$100.000 (Estimación provisional, *Dato Desconocido* en facturas electrónicas)
+*   **TOTAL LÍNEA DE FLOTACIÓN:** **~$3.980.000 CLP / mes**
 
 **La Matemática de Supervivencia:**
 *   Flujo inercial proyectado (con caída del 30% por marca nueva): **110 pacientes/mes**.
-*   Para cubrir los $3.140.000 con 110 pacientes, nuestro ticket debe ser superior a **$28.545 CLP**. 
+*   Para cubrir los $3.980.000 con 110 pacientes, nuestro ticket debe ser superior a **$36.181 CLP** (sigue siendo menor a los 42k esperados). 
+*   Punto de Equilibrio con ticket de $42.000: **95 pacientes/mes**.
 *   *Conclusión:* La supervivencia del negocio está asegurada si logramos el Upsell, quitando toda la presión a Daniela.
 
 ## 2. Fase 1: Estructuración de la "Oferta Irresistible" (Grand Slam Offer)
