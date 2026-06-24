@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Inversores - Clínica Veterinaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: rgba(30, 41, 59, 0.7);
+            --accent-color: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.5);
+            --text-main: #f8fafc;
+            --text-muted: #cbd5e1;
+            --success-color: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(15, 23, 42, 1) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(30, 58, 138, 0.3) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(15, 23, 42, 1) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(16, 185, 129, 0.1) 0px, transparent 50%);
+            background-attachment: fixed;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+        }
+
+        .panel {
+            background: var(--surface-color);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Strategy Sidebar */
+        .strategy-list {
+            list-style: none;
+        }
+
+        .strategy-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .strategy-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .strategy-item h3 {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .strategy-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .highlight-box {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--success-color);
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--success-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .highlight-box p {
+            color: var(--text-main);
+            font-size: 0.9rem;
+        }
+
+        /* Charts Section */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .charts-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .chart-container {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            height: 400px;
+            position: relative;
+        }
+
+        .chart-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Database Section */
+        .database-section {
+            grid-column: 1 / -1;
+            margin-top: 2rem;
+            height: 600px;
+        }
+
+        .database-section iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .charts-grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Máquina de Flujo de Caja Veterinaria</h1>
+        <p>Dashboard de Estrategia, Costos y Análisis de Datos (Pitch Deck Inversores)</p>
+    </div>
+
+    <div class="container">
+        
+        <!-- Sidebar Estrategia -->
+        <div class="panel">
+            <h2 class="panel-title">🧠 Core Estratégico</h2>
+            
+            <ul class="strategy-list">
+                <li class="strategy-item">
+                    <h3>1. La Ventaja Injusta</h3>
+                    <p>Un equipo fundador que cubre los 3 pilares: Capital (Alfonso, 3 meses de arriendo gracia), Operación Médica (Daniela, Directora Médica) y Adquisición/Tecnología (Sasha, Data & Automatización).</p>
+                </li>
+                <li class="strategy-item">
+                    <h3>2. Estructura de Costos Lean</h3>
+                    <p>Operamos con un modelo ajustado de supervivencia. Los socios operativos toman un "Sueldo de Supervivencia" al inicio ($1.2M Médica, $800k Data), generando una deuda de mercado pagadera con dividendos futuros.</p>
+                    <div class="highlight-box">
+                        <h4>Stack Tecnológico Agil</h4>
+                        <p>Costos mensuales en software reducidos a ~$140k CLP utilizando Bsale, conectividad estable y flujos automatizados con n8n/Airtable en lugar de sistemas monolíticos costosos.</p>
+                    </div>
+                </li>
+                <li class="strategy-item">
+                    <h3>3. El Grand Slam Offer</h3>
+                    <p>Auditoría Integral para Mascotas a <strong>$15.000 CLP</strong> (pago anticipado). No buscamos ganar dinero con la entrada, sino liquidar el Costo de Adquisición de Clientes (CAC) y derivarlos inmediatamente a la farmacia/laboratorio donde está el verdadero margen.</p>
+                </li>
+                <li class="strategy-item">
+                    <h3>4. La Matemática de Supervivencia</h3>
+                    <p>Línea de flotación fijada en <strong>$3.140.000 CLP</strong>. Con un ticket promedio esperado de $42.000, solo necesitamos <strong>75 pacientes/mes</strong> para no quebrar. La base histórica inercial es de 110 pacientes/mes. El éxito es inminente.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Charts Area -->
+        <div class="panel">
+            <h2 class="panel-title">📈 Proyección Financiera (Interactiva)</h2>
+            
+            <div class="charts-grid">
+                <!-- Rentabilidad -->
+                <div class="chart-container">
+                    <iframe src="https://raw.githack.com/sashaalcalavyh-lang/PET/master/Analisis_Administracion_Anterior_vs_Nueva/3_rentabilidad_esperada.html" title="Rentabilidad"></iframe>
+                </div>
+            </div>
+
+            <div class="charts-grid-2">
+                <!-- Breakeven -->
+                <div class="chart-container">
+                    <iframe src="https://raw.githack.com/sashaalcalavyh-lang/PET/master/Analisis_Administracion_Anterior_vs_Nueva/1_punto_equilibrio.html" title="Punto de Equilibrio"></iframe>
+                </div>
+                <!-- Upsell -->
+                <div class="chart-container">
+                    <iframe src="https://raw.githack.com/sashaalcalavyh-lang/PET/master/Analisis_Administracion_Anterior_vs_Nueva/2_estructura_ticket_upsell.html" title="Estructura Ticket"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Database Area -->
+        <div class="panel database-section">
+            <h2 class="panel-title">🗄️ Transparencia de Datos (Tiempo Real)</h2>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">Explora los datos históricos reales que respaldan nuestro análisis (Libro de Compras y Ventas).</p>
+            <iframe src="https://lite.datasette.io/?url=https://raw.githubusercontent.com/sashaalcalavyh-lang/PET/master/Proyecto_Integracion_Historico/pet_historico.db#/pet_historico" title="Base de Datos"></iframe>
+        </div>
+
+    </div>
+
+</body>
+</html>
