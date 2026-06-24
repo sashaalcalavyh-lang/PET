@@ -1,0 +1,22 @@
+RESUMEN DE OUTLIERS
+Limite 99%: 13544103.82000015
+N Outliers: 2
+
+RESUMEN POR SEGMENTO (Sin Outliers)
+     Segmento  Clientes  Gasto_Promedio_Anual  Gasto_Promedio_Mensual
+0  Esporádico       140          2.418355e+06           201529.592857
+1  Recurrente        22          4.516977e+06           376414.775868
+
+BRECHA DE CATEGORIAS (Top 10)
+Segmento                Esporádico  Recurrente  Brecha_Recurrente_vs_Esporadico
+CATEGORIA                                                                      
+ACCESORIOS               13.571429   37.500000                        23.928571
+ANESTESIA                26.428571   45.833333                        19.404762
+CONSULTA                 37.142857   54.166667                        17.023810
+PROCEDIMIENTO             0.000000   16.666667                        16.666667
+EXAMENEXTERNO             5.000000   20.833333                        15.833333
+SERVICIOS CON IVA        74.285714   87.500000                        13.214286
+HOSPITALIZACIÓN           7.857143   20.833333                        12.976190
+DESPARACITACIÓNINTERNA    0.000000    8.333333                         8.333333
+MEDICAMENTOS              0.000000    8.333333                         8.333333
+SEDACION                  0.000000    8.333333                         8.333333
