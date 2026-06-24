@@ -129,6 +129,38 @@
             font-size: 0.9rem;
         }
 
+        details {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+        summary {
+            font-weight: 600;
+            color: var(--text-main);
+            outline: none;
+            user-select: none;
+        }
+        .details-content {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .data-source {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        .data-source span {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
         /* Charts Section */
         .charts-grid {
             display: grid;
@@ -197,12 +229,28 @@
             
             <ul class="strategy-list">
                 <li class="strategy-item">
-                    <h3>1. La Ventaja Injusta</h3>
+                    <h3>1. Unfair Advantage</h3>
                     <p>Un equipo fundador que cubre los 3 pilares: Capital (Alfonso, 3 meses de arriendo gracia), Operación Médica (Daniela, Directora Médica) y Adquisición/Tecnología (Sasha, Data & Automatización).</p>
                 </li>
                 <li class="strategy-item">
                     <h3>2. Estructura de Costos Lean</h3>
                     <p>Operamos con un modelo ajustado de supervivencia. Los socios operativos toman un "Sueldo de Supervivencia" al inicio ($1.2M Médica, $800k Data), generando una deuda de mercado pagadera con dividendos futuros.</p>
+                    <details>
+                        <summary>Ver Desglose de Costos (Antigua vs Nueva)</summary>
+                        <div class="details-content">
+                            <strong>🔴 Administración Anterior (~$7.5M Fijos)</strong><br>
+                            - Arriendo inflado sin negociar<br>
+                            - Sueldos completos sin vincular a métricas de retención<br>
+                            - Sobre-contratación y licencias ineficientes<br><br>
+                            <strong>🟢 Nueva Administración (~$3.14M Fijos)</strong><br>
+                            - Arriendo: $0 (3 meses de gracia por negociación)<br>
+                            - Daniela (Cirujana): $1.200.000 (Supervivencia)<br>
+                            - Técnico Full-Time: $600.000<br>
+                            - Sasha (Data/Marketing): $800.000 (Supervivencia)<br>
+                            - Stack Tecnológico / Internet: $140.000 (Bsale, n8n, etc)<br>
+                            - Operación/Insumos Fijos: $400.000<br>
+                        </div>
+                    </details>
                     <div class="highlight-box">
                         <h4>Stack Tecnológico Agil</h4>
                         <p>Costos mensuales en software reducidos a ~$140k CLP utilizando Bsale, conectividad estable y flujos automatizados con n8n/Airtable en lugar de sistemas monolíticos costosos.</p>
@@ -225,19 +273,28 @@
             
             <div class="charts-grid">
                 <!-- Rentabilidad -->
-                <div class="chart-container">
-                    <iframe src="https://raw.githack.com/sashaalcalavyh-lang/PET/master/Analisis_Administracion_Anterior_vs_Nueva/3_rentabilidad_esperada.html" title="Rentabilidad"></iframe>
+                <div>
+                    <div class="chart-container">
+                        <iframe src="https://raw.githack.com/sashaalcalavyh-lang/PET/master/Analisis_Administracion_Anterior_vs_Nueva/3_rentabilidad_esperada.html" title="Rentabilidad"></iframe>
+                    </div>
+                    <div class="data-source">Fuente de Costos: Tabla <span>TBL_FACTURAS_COMPRAS</span> y Modelo Lean</div>
                 </div>
             </div>
 
             <div class="charts-grid-2">
                 <!-- Breakeven -->
-                <div class="chart-container">
-                    <iframe src="https://raw.githack.com/sashaalcalavyh-lang/PET/master/Analisis_Administracion_Anterior_vs_Nueva/1_punto_equilibrio.html" title="Punto de Equilibrio"></iframe>
+                <div>
+                    <div class="chart-container">
+                        <iframe src="https://raw.githack.com/sashaalcalavyh-lang/PET/master/Analisis_Administracion_Anterior_vs_Nueva/1_punto_equilibrio.html" title="Punto de Equilibrio"></iframe>
+                    </div>
+                    <div class="data-source">Fuente Volumen: Tabla <span>TBL_INFORME_VENTAS_PORCLIENTES</span></div>
                 </div>
                 <!-- Upsell -->
-                <div class="chart-container">
-                    <iframe src="https://raw.githack.com/sashaalcalavyh-lang/PET/master/Analisis_Administracion_Anterior_vs_Nueva/2_estructura_ticket_upsell.html" title="Estructura Ticket"></iframe>
+                <div>
+                    <div class="chart-container">
+                        <iframe src="https://raw.githack.com/sashaalcalavyh-lang/PET/master/Analisis_Administracion_Anterior_vs_Nueva/2_estructura_ticket_upsell.html" title="Estructura Ticket"></iframe>
+                    </div>
+                    <div class="data-source">Fuente Upsell: Tabla <span>TBL_INFORME_DETALLEDE_VENTAS</span></div>
                 </div>
             </div>
         </div>

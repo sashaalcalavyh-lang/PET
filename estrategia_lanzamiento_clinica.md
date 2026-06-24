@@ -2,7 +2,7 @@
 
 Este documento detalla la estrategia para tomar un local veterinario subutilizado y convertirlo en un negocio altamente rentable, aplicando el modelo de **Alex Hormozi ($100M Offers)**. Nuestro objetivo es el flujo de caja positivo, no los "Likes" en redes sociales.
 
-## 0. La Ventaja Injusta (El Equipo Fundador)
+## 0. La Unfair Advantage (El Equipo Fundador)
 La fortaleza de esta clínica radica en el triángulo de los socios:
 *   **Alfonso:** Inyección de capital y resguardo financiero. Logró negociar **3 meses de gracia** en el arriendo, lo que reduce el estrés de caja inicial a casi cero.
 *   **Daniela:** Doctora, cirujana y anestesista con experiencia previa como dueña de clínica. Supervisará los protocolos médicos, compras de equipos y reclutamiento del talento (evitando cuellos de botella operativos).
