@@ -38,8 +38,9 @@ El error es competir vendiendo "Consulta General" como un commodity.
 
 ### El Lead Magnet (Front-End)
 *   **El Gancho:** Auditoría Integral para Perros y Gatos a **$15.000 CLP**. Consulta Especializada de Exóticos a **$25.000 CLP** (Ambos con pago 100% anticipado para agendar).
-*   **Inversión Inicial de Marketing:** Se contempla un presupuesto de **$1.000.000 CLP** el primer mes para empujar estas ofertas en Meta Ads y saturar Valparaíso.
-*   **Objetivo:** Este servicio *no genera utilidad neta*. Su único propósito es liquidar el CAC (Costo de Adquisición). Si gastamos en Ads para traer a alguien por la puerta, y paga la entrada, ya ganamos.
+*   **El Entregable (Valor Tangible):** El cliente recibe un "Scorecard de Longevidad" impreso/PDF (automatizado vía n8n) con nota sobre Peso, Dentadura, Piel, Corazón y Articulaciones, más un Roadmap de 3 pasos.
+*   **La Garantía Inversa (Risk Reversal):** *"Si sientes que no te dimos un plan de salud superior al de tu clínica anterior, te devolvemos el 100% de tu dinero"*. (El Scorecard hace que el valor percibido sea tan alto que los reembolsos tenderán a cero).
+*   **Inversión Inicial de Marketing:** Presupuesto de **$1.000.000 CLP** el primer mes en Meta Ads para liquidar el CAC.
 
 ### El Upsell de Farmacia (El Verdadero Back-End)
 *   La data histórica revela que **el Upsell promedio es de $26.988 CLP**.
@@ -57,6 +58,9 @@ La base de datos revela que Septiembre es el peor mes históricamente (caída de
 *   **La Estrategia Hormozi:** Durante los feriados (semana del 18 de Septiembre), no cerraremos ni abriremos para consultas de bajo valor. Se activará el modelo **"Turnos de Urgencia Premium"**.
 *   **Ejecución:** Se atiende a puertas cerradas. El ticket mínimo de urgencia sube a un multiplicador 2x o 3x (Ej. $45.000 Base). Las personas pagan precios irracionales cuando su mascota se intoxica con asado en Fiestas Patrias. Alto ticket, bajo volumen, misma facturación.
 
-## 6. Visión a Mediano Plazo (Mes 4+)
-*   **Planes de Suscripción:** Una vez estabilizado el flujo con la farmacia, se lanza un modelo tipo Netflix ($6.990/mes) que incluya vacuna y desparasitación anual. Esto creará Ingreso Recurrente (MRR) para cubrir los costos fijos (incluyendo el nuevo arriendo del mes 4) automáticamente cada día 1 del mes.
-*   **Vacuna China (Gatos):** Implementación escalonada basada en Reels orgánicos para traer público hiper-nicho y alto ticket.
+## 6. Frenando el Balde Agujereado: MRR desde el Día 1
+La antigua clínica perdía al 73.8% de sus clientes tras la primera visita. Para evitar esto, no podemos esperar al "mes 4" para vender suscripciones.
+*   **El Club de Protección Continua:** Ofrecido en la *misma primera visita* como Upsell. Suscripción de ~$6.990 - $9.990/mes.
+*   **El Valor:** La clínica se encarga de administrar o enviar la dosis exacta de **Desparasitación Interna y Externa** mensual/trimestral, quitándole la carga mental al dueño.
+*   **El Bono de Retención:** Si completan 12 meses, la Vacuna Anual va 100% gratis.
+*   **Objetivo:** Crear Flujo de Caja Predecible (MRR) que cubra los costos fijos (incluido el arriendo de $700k en el Mes 4) de manera automática.
