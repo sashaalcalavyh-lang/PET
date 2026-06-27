@@ -213,6 +213,106 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* Infographic Section */
+        .infographic-container {
+            max-width: 1400px;
+            margin: 0 auto 3rem auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(59, 130, 246, 0.6);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+        }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #3b82f6, #10b981);
+            opacity: 0.7;
+        }
+
+        .info-card h3 {
+            color: var(--text-muted);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .info-card .metric {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+        
+        .info-card .metric span {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .info-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .highlight-text {
+            color: #34d399;
+            font-weight: 600;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            margin-top: 1.5rem;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, #3b82f6, #34d399);
+            width: 31%; /* 6.6M of 21M */
+        }
+        
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .infographic-container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -220,6 +320,39 @@
     <div class="header">
         <h1>Máquina de Flujo de Caja Veterinaria</h1>
         <p>Dashboard de Estrategia, Costos y Análisis de Datos (Pitch Deck Inversores)</p>
+    </div>
+
+    <!-- Infografía Dinámica -->
+    <div class="infographic-container">
+        <!-- Card 1: Investment Ask -->
+        <div class="info-card">
+            <h3>Inversión Total Requerida</h3>
+            <div class="metric">$21.05<span>M CLP</span></div>
+            <p>Estructura de Capital basada en el Presupuesto 3. Cubre la remodelación, equipamiento médico de alto estándar y <span class="highlight-text">costos operativos iniciales</span>.</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="progress-labels">
+                <span>$6.6M OpEx (Supervivencia)</span>
+                <span>$14.4M CapEx (Equipos)</span>
+            </div>
+        </div>
+
+        <!-- Card 2: Runway & Breakeven -->
+        <div class="info-card">
+            <h3>Línea de Flotación Mensual</h3>
+            <div class="metric">$3.98<span>M CLP</span></div>
+            <p>Burn rate drásticamente reducido vs. administración anterior ($7.5M). Logrado con <span class="highlight-text">3 meses de gracia de arriendo</span> y sueldos lean del equipo fundador.</p>
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: #60a5fa;">🎯 Breakeven: ~95 pacientes/mes (vs 110 histórico)</p>
+        </div>
+
+        <!-- Card 3: MRR Strategy -->
+        <div class="info-card">
+            <h3>Máquina de Flujo (MRR)</h3>
+            <div class="metric">73.8<span>% Fuga</span></div>
+            <p>La clínica anterior perdía al 73.8% de pacientes. Nuestra solución: <span class="highlight-text">Club de Protección Continua</span> ($6.990/mes) vendido en la primera visita.</p>
+            <p style="margin-top: 1rem; font-size: 0.85rem; color: #60a5fa;">🔄 Meta: Transformar CAC en ingresos recurrentes.</p>
+        </div>
     </div>
 
     <div class="container">
