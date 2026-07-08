@@ -369,3 +369,15 @@ Agregar al dashboard en la pesta√±a 3 el resumen de factores de fracaso, estacio
  3 .   H a c e r   p u s h   a l   r e p o s i t o r i o   d e   G i t H u b   d e   S a s h a . 
   
  
+ * * S o l i c i t u d   E s t r a t È g i c a   ( M e t a s   d e   V e n t a   y   U t i l i d a d ) : * * 
+ -   * * M e s   1 - 3   ( D È f i c i t ) : * *   M e t a   d e   . 5 M   -   . 5 M   ( p e o r   e s c e n a r i o   p o r   c i e r r e ) .   Q u e m a   c a j a   d e l   F o n d o   d e   E m e r g e n c i a . 
+ -   * * M e s   4 - 6   ( E q u i l i b r i o ) : * *   M e t a   d e   . 9 M .   C u b r e   O P E X   y   R R H H   f i j o .   U t i l i d a d   0 ,   s u e l d o   b a s e   m Ì n i m o . 
+ -   * * M e s   7 +   ( M e t a   . 8 M   L Ì q u i d o s ) : * *   P a r a   q u e   S a s h a   y   D a n i e l a   s a q u e n   . 8 M   l Ì q u i d o s   m e n s u a l e s ,   l a   c l Ì n i c a   d e b e   v e n d e r   ~ . 5 M .   E s t o   c u b r e   e l   C o s t o   F i j o   ( . 5 M ) ,   l o s   I n s u m o s   ( 3 0 % )   y   d e j a   l a   U t i l i d a d   N e t a   p a r a   l o s   r e t i r o s   e x t r a . 
+  
+ 
+ * * S o l i c i t u d   E s t r a t È g i c a   ( G r · f i c a   d e   E s c a l a m i e n t o ) : * * 
+ -   * * I n c l u s i Û n   e n   D a s h b o a r d : * *   G r · f i c a   d e   p r o y e c c i Û n   a   1 2   m e s e s . 
+ -   * * F a s e s : * *   M e s   1 - 3   ( D È f i c i t ,   q u e m a   d e   c a j a ) ,   M e s   4 - 6   ( E q u i l i b r i o   a   U t i l i d a d   l e v e ) ,   M e s   7 +   ( V e n t a s   d e     y   U t i l i d a d   d e   ) . 
+ -   * * V a l i d a c i Û n : * *   E s   r e a l i s t a   s i   e l   m a r g e n   b r u t o   s u b e   a l   7 5 - 8 0 %   r e t e n i e n d o   s e r v i c i o s   i n - h o u s e   ( e j .   l a b o r a t o r i o   y   c i r u g Ì a s   c o m p l e j a s ) . 
+  
+ 

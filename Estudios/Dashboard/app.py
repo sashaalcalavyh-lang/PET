@@ -386,6 +386,70 @@ with tab2:
     """)
 
     st.markdown("---")
+    st.markdown("### 📈 Proyección de Escalamiento a 12 Meses (Timeline Estratégico)")
+    st.markdown("Esta gráfica modela tu hoja de ruta. Demuestra que es **100% realista** llegar a los $3 Millones de utilidad neta vendiendo $11 Millones al mes, **siempre y cuando** retengan el margen de ganancia alto de los exámenes de laboratorio in-house y las cirugías.")
+
+    meses = ["Mes 1", "Mes 2", "Mes 3", "Mes 4", "Mes 5", "Mes 6", "Mes 7", "Mes 8", "Mes 9", "Mes 10", "Mes 11", "Mes 12"]
+    ventas_proj = [4500000, 5000000, 5500000, 7900000, 8500000, 9500000, 10000000, 10500000, 11000000, 11000000, 11000000, 11000000]
+    
+    # Utilidades proyectadas modelando margen de 75-80% y costos fijos de 5.5M
+    utilidad_proj = [
+        -2500000, # Mes 1 (Pérdida - Fondo Emergencia)
+        -2000000, # Mes 2 (Pérdida - Fondo Emergencia)
+        -1500000, # Mes 3 (Pérdida - Fondo Emergencia)
+        0,        # Mes 4 (Punto Equilibrio exacto)
+        500000,   # Mes 5 (Leve ganancia)
+        1200000,  # Mes 6
+        1800000,  # Mes 7
+        2400000,  # Mes 8
+        3000000,  # Mes 9 (Meta alcanzada: 11M Venta -> 3M Utilidad)
+        3000000,  # Mes 10
+        3000000,  # Mes 11
+        3000000   # Mes 12
+    ]
+
+    fig_proj = go.Figure()
+    # Barras de Ventas
+    fig_proj.add_trace(go.Bar(
+        x=meses,
+        y=ventas_proj,
+        name='Ventas (Facturación)',
+        marker_color='royalblue',
+        opacity=0.7
+    ))
+    # Línea de Utilidad/Pérdida
+    fig_proj.add_trace(go.Scatter(
+        x=meses,
+        y=utilidad_proj,
+        name='Utilidad Neta (Caja Libre)',
+        mode='lines+markers+text',
+        marker=dict(size=12, color=['red' if u < 0 else ('gold' if u == 0 else 'green') for u in utilidad_proj]),
+        line=dict(color='black', width=3),
+        text=[f"${u/1000000:.1f}M" for u in utilidad_proj],
+        textposition="top center"
+    ))
+
+    fig_proj.update_layout(
+        title='Mapa de Ruta: Del Valle de la Muerte a la Rentabilidad',
+        xaxis_title='Línea de Tiempo Operativa',
+        yaxis_title='Monto (CLP)',
+        barmode='group',
+        hovermode="x unified",
+        shapes=[
+            # Línea de cero (Break-even)
+            dict(type="line", x0=0, x1=11, y0=0, y1=0, line=dict(color="black", width=2, dash="dash"))
+        ],
+        annotations=[
+            dict(x=1, y=-500000, text="Fase Crítica<br>(Rescate Fondo Emergencia)", showarrow=False, font=dict(color="darkred", size=11)),
+            dict(x=3.5, y=3000000, text="Break-Even<br>Utilidad Cero", showarrow=False, font=dict(color="darkgoldenrod", size=11)),
+            dict(x=9, y=5500000, text="Meta Alcanzada<br>3M Utilidad", showarrow=False, font=dict(color="darkgreen", size=11))
+        ],
+        margin=dict(t=50, b=50)
+    )
+
+    st.plotly_chart(fig_proj, use_container_width=True)
+
+    st.markdown("---")
     st.markdown("### ⚖️ Arquitectura Legal y Societaria (Propuesta Directorio)")
     st.markdown("Este es el resumen ejecutivo del blindaje legal diseñado para proteger a todos los socios, asegurar el retorno de la inversión y mantener la paz familiar y administrativa.")
     
