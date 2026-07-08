@@ -1,9 +1,0 @@
-# Ignorar archivos pesados o innecesarios
-historico/*.zip
-historico/*.rar
-*.log
-__pycache__/
-*.pyc
-
-# Ignoramos la carpeta temporal o generada por el IDE
-.gemini/

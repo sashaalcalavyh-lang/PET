@@ -1,0 +1,3 @@
+REPORTE DE ARCHIVOS NO PROCESADOS O CON ERRORES
+==================================================
+OMITIDO Ventas Diarias - Registro de Ventas - Pendientes Dodozooft.xlsx: No se pudo deducir Año/Mes.
