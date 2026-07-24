@@ -43,14 +43,14 @@ liquido_med2 = (imponible_med2 * 0.80) + comision_estimada_med2
 # 4. Médico 3 (Fines de semana) - Boleta Honorarios
 # Asumimos 60 horas al mes a \.000 (Monto Bruto pagado por clínica)
 valor_hora_med3 = 5000
-horas_med3 = 60
+horas_med3 = 0  # 100% Variable (Solo si se abre FDS)
 costo_empresa_med3 = valor_hora_med3 * horas_med3
 liquido_med3 = costo_empresa_med3 * (1 - 0.1375)
 
 # 5. Técnicos (Llamados según necesidad) - Boleta Honorarios
 # Asumimos 60 horas al mes a \.000 (Monto Bruto pagado por clínica)
 valor_hora_tec = 3000
-horas_tec = 60
+horas_tec = 0  # 100% Variable (Solo si hay hospitalizados)
 costo_empresa_tec = valor_hora_tec * horas_tec
 liquido_tec = costo_empresa_tec * (1 - 0.1375)
 

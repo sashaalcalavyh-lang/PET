@@ -402,3 +402,9 @@ aqui no se regustro la nueva nomina , sigue apareciendo todo igual
 
 **Solicitud:**
 puedes agregar que abajo de la tabla de nomina se desglose una explicacion de horas laborales...
+
+**Solicitud:**
+ahora con lo nuevo hazme un analisis de negocio y dime si vale la pena
+
+**Solicitud:**
+pero el medico 3 es si se habre de sabado y domingo si no no, y los tecnicos solo se llamaria al de noche si queda alguna mascotahospitalizada nocturno
