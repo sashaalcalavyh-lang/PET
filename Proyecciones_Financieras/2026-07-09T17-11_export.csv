@@ -1,0 +1,41 @@
+﻿Área,Ítem,Cantidad,Monto Neto (CLP),IVA (CLP),Monto Total (CLP)
+Recepción,Mesón,1,$149.990,$0,$149.990
+Recepción,Computador,1,$300.000,$0,$300.000
+Recepción,POINT mercado pago,1,$50.000,$9.500,$59.500
+Recepción,Teléfono,1,$90.000,$0,$90.000
+Recepción,Impresora,1,$100.000,$0,$100.000
+Recepción,Silla computador,1,$32.990,$0,$32.990
+Recepción,Sillas espera x4,1,$99.990,$0,$99.990
+Consulta,Mesa procedimiento,1,$89.700,$0,$89.700
+Consulta,Refrigerador,1,$39.990,$0,$39.990
+Consulta,Pesa grande,1,$210.000,$0,$210.000
+Consulta,Pesa pequeña,1,$15.000,$0,$15.000
+Consulta,Pesa gramera,1,$15.000,$0,$15.000
+Consulta,Mueble,1,$100.000,$0,$100.000
+Consulta,Escritorio,1,$38.990,$0,$38.990
+Consulta,Silla,1,$32.990,$0,$32.990
+Pabellón,Máquina anestesia,1,$3.570.000,$678.300,$4.248.300
+Pabellón,Mesa quirúrgica,1,$1.420.000,$269.800,$1.689.800
+Pabellón,Concentrador oxígeno,1,$752.952,$143.061,$896.013
+Pabellón,Mesa mayo,1,$68.500,$0,$68.500
+Pabellón,Mueble,1,$100.000,$0,$100.000
+Pabellón,Lámpara cirugía,2,$98.980,$0,$98.980
+Pabellón,Autoclave,1,$110.960,$0,$110.960
+Hospital,Canil estación UCI/6 mod,1,$3.990.000,$758.100,$4.748.100
+Hospital,Mesa procedimiento,1,$89.700,$0,$89.700
+Hospital,Mueble almacenamiento,1,$100.000,$0,$100.000
+Hospital,Porta suero,1,$81.990,$15.578,$97.568
+Costos Iniciales,Arriendo Fraccionado (Mes 1),1,$1.000.000,$0,$1.000.000
+Costos Iniciales,Constitucion de soc y patente,1,$200.000,$0,$200.000
+Costos Iniciales,Honorarios Contador (Config inicial),1,$100.000,$0,$100.000
+Costos Iniciales,Sueldo Sasha (Mes 1 Sincronizado),1,$910.711,$0,$910.711
+Costos Iniciales,Sueldo Dani (Mes 1 Sincronizado),1,$1.310.711,$0,$1.310.711
+Costos Iniciales,Sueldo Técnico Fijo (Mes 1 Sincronizado),1,$812.062,$0,$812.062
+Costos Iniciales,Sueldo Técnico Boleta (Mes 1 Sincronizado),1,$341.250,$0,$341.250
+Costos Iniciales,Internet,1,$27.000,$0,$27.000
+Costos Iniciales,Insumos Hospital y Consulta,1,$1.200.000,$228.000,$1.428.000
+Costos Iniciales,Camara de seguridad x4,1,$200.000,$38.000,$238.000
+Costos Iniciales,Software + stack,1,$300.000,$57.000,$357.000
+Costos Iniciales,SEO Inicial,1,$1.000.000,$0,$1.000.000
+Caja Seguridad,FONDO DE EMERGENCIA (6 Meses Costos Fijos),1,$33.208.401,$0,$33.208.401
+TOTAL GENERAL,,,$52.357.856,$2.197.339,$54.555.195

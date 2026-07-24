@@ -10,31 +10,80 @@ opex_data = {
 df_opex = pd.DataFrame(opex_data)
 
 # 2. RRHH (Fase 1 con Carga Legal y Provisiones)
-sueldo_minimo = 553553
+sueldo_minimo = 500000
 
-# Para Socias (Sueldo Patronal)
-costo_patronal = sueldo_minimo * 1.20 
-costo_empresa_sasha = costo_patronal + (800000 - sueldo_minimo)
-costo_empresa_dani = costo_patronal + (1200000 - sueldo_minimo)
+# 1. Daniela (Socia Directora Médica) - 25 hrs
+sueldo_base_dani = 395395
+gratificacion_dani = sueldo_base_dani * 0.25
+imponible_dani = sueldo_base_dani + gratificacion_dani
+aportes_empleador_dani = imponible_dani * 0.0487 # SIS + AFC + Mutual
+provisiones_dani = imponible_dani * 0.1249 # Vacaciones + IAS
+retiro_dani = 1700000 - imponible_dani * 0.80 # Aprox liquido sin retiro = 80% del imponible
+costo_empresa_dani = imponible_dani + aportes_empleador_dani + provisiones_dani + retiro_dani
 
-# Para Técnico Fijo:
-gratificacion_legal = sueldo_minimo * 0.25
-imponible_tecnico = sueldo_minimo + gratificacion_legal
-aportes_empleador = imponible_tecnico * 0.0487 # SIS + AFC + Mutual
-provisiones_tecnico = imponible_tecnico * 0.1249 # Vacaciones (4.16%) + IAS (8.33%)
-costo_empresa_tecnico = imponible_tecnico + aportes_empleador + provisiones_tecnico
+# 2. Sasha (Socia Recepción) - 30 hrs
+sueldo_base_sasha = 395395
+gratificacion_sasha = sueldo_base_sasha * 0.25
+imponible_sasha = sueldo_base_sasha + gratificacion_sasha
+aportes_empleador_sasha = imponible_sasha * 0.0487
+provisiones_sasha = imponible_sasha * 0.1249
+retiro_sasha = 800000 - imponible_sasha * 0.80
+costo_empresa_sasha = imponible_sasha + aportes_empleador_sasha + provisiones_sasha + retiro_sasha
 
-# Para Boleta
-retencion_boleta = 1.1375
-costo_empresa_boleta = 300000 * retencion_boleta
+# 3. Médico 2 (Tarde/Sábado) - 30 hrs Part-Time
+sueldo_base_med2 = 395395
+gratificacion_med2 = sueldo_base_med2 * 0.25
+imponible_med2 = sueldo_base_med2 + gratificacion_med2
+aportes_empleador_med2 = imponible_med2 * 0.0487
+provisiones_med2 = imponible_med2 * 0.1249
+comision_estimada_med2 = 300000 # Estimado para presupuesto
+costo_empresa_med2 = imponible_med2 + aportes_empleador_med2 + provisiones_med2 + comision_estimada_med2
+liquido_med2 = (imponible_med2 * 0.80) + comision_estimada_med2
+
+# 4. Médico 3 (Fines de semana) - Boleta Honorarios
+# Asumimos 60 horas al mes a \.000 (Monto Bruto pagado por clínica)
+valor_hora_med3 = 5000
+horas_med3 = 60
+costo_empresa_med3 = valor_hora_med3 * horas_med3
+liquido_med3 = costo_empresa_med3 * (1 - 0.1375)
+
+# 5. Técnicos (Llamados según necesidad) - Boleta Honorarios
+# Asumimos 60 horas al mes a \.000 (Monto Bruto pagado por clínica)
+valor_hora_tec = 3000
+horas_tec = 60
+costo_empresa_tec = valor_hora_tec * horas_tec
+liquido_tec = costo_empresa_tec * (1 - 0.1375)
+
+# 6. Recepcionista 2 - 40 hrs
+sueldo_base_recep2 = 553553
+gratificacion_recep2 = sueldo_base_recep2 * 0.25
+imponible_recep2 = sueldo_base_recep2 + gratificacion_recep2
+aportes_empleador_recep2 = imponible_recep2 * 0.0487
+provisiones_recep2 = imponible_recep2 * 0.1249
+costo_empresa_recep2 = imponible_recep2 + aportes_empleador_recep2 + provisiones_recep2
+liquido_recep2 = imponible_recep2 * 0.80
 
 rrhh_data = {
-    'Cargo': ['Sasha (Socia Administradora)', 'Daniela (Socia Jefe Médico)', 'Técnico Veterinario (Fijo)', 'Técnico (Boleta/Part-Time)'],
-    'Estructura Contractual': ['Sueldo Patronal + Retiro', 'Sueldo Patronal + Retiro', 'Contrato Fijo (Con Aportes + Provisiones Ahorro)', 'Prestación de Servicios'],
-    'Sueldo Base (Base Cálculo)': [sueldo_minimo, sueldo_minimo, sueldo_minimo, 0],
-    'Retiro Mensual (Libre Imp.)': [800000 - sueldo_minimo, 1200000 - sueldo_minimo, 0, 0],
-    'Ingreso Líquido Aprox (Bolsillo)': [800000, 1200000, imponible_tecnico * 0.80, 300000],
-    'Costo Empresa Fijo Mensual': [costo_empresa_sasha, costo_empresa_dani, costo_empresa_tecnico, costo_empresa_boleta]
+    'Cargo': [
+        'Daniela (Socia Directora Médica)', 
+        'Sasha (Socia Recepción)', 
+        'Médico 2 (Tarde/Sábado)', 
+        'Médico 3 (Fines de semana)', 
+        'Técnicos (Diurno/Nocturno)', 
+        'Recepcionista 2'
+    ],
+    'Estructura Contractual': [
+        'Contrato Trabajo + Retiro', 
+        'Contrato Trabajo + Retiro', 
+        'Contrato Trabajo (Part-Time)', 
+        'Boleta Honorarios', 
+        'Boleta Honorarios', 
+        'Contrato Trabajo (Full-Time)'
+    ],
+    'Sueldo Base (Base Cálculo)': [sueldo_base_dani, sueldo_base_sasha, sueldo_base_med2, 0, 0, sueldo_base_recep2],
+    'Retiro de Socia (Libre Imp.)': [retiro_dani, retiro_sasha, 0, 0, 0, 0],
+    'Ingreso Líquido (Bolsillo)': [1700000, 800000, liquido_med2, liquido_med3, liquido_tec, liquido_recep2],
+    'Costo Empresa Fijo Mensual': [costo_empresa_dani, costo_empresa_sasha, costo_empresa_med2, costo_empresa_med3, costo_empresa_tec, costo_empresa_recep2]
 }
 df_rrhh = pd.DataFrame(rrhh_data)
 
@@ -71,8 +120,10 @@ capex_detalle_data = [
     ['Costos Iniciales', 'Honorarios Contador (Config inicial)', 1, 100000, 0, 100000],
     ['Costos Iniciales', 'Sueldo Sasha (Mes 1 Sincronizado)', 1, costo_empresa_sasha, 0, costo_empresa_sasha],
     ['Costos Iniciales', 'Sueldo Dani (Mes 1 Sincronizado)', 1, costo_empresa_dani, 0, costo_empresa_dani],
-    ['Costos Iniciales', 'Sueldo Técnico Fijo (Mes 1 Sincronizado)', 1, costo_empresa_tecnico, 0, costo_empresa_tecnico],
-    ['Costos Iniciales', 'Sueldo Técnico Boleta (Mes 1 Sincronizado)', 1, costo_empresa_boleta, 0, costo_empresa_boleta],
+    ['Costos Iniciales', 'Sueldo Médico 2 (Mes 1 Sincronizado)', 1, costo_empresa_med2, 0, costo_empresa_med2],
+    ['Costos Iniciales', 'Sueldo Médico 3 (Mes 1 Sincronizado)', 1, costo_empresa_med3, 0, costo_empresa_med3],
+    ['Costos Iniciales', 'Sueldo Técnicos (Mes 1 Sincronizado)', 1, costo_empresa_tec, 0, costo_empresa_tec],
+    ['Costos Iniciales', 'Sueldo Recepcionista 2 (Mes 1 Sincronizado)', 1, costo_empresa_recep2, 0, costo_empresa_recep2],
     ['Costos Iniciales', 'Internet', 1, 27000, 0, 27000],
     ['Costos Iniciales', 'Insumos Hospital y Consulta', 1, 1200000, 228000, 1428000],
     ['Costos Iniciales', 'Camara de seguridad x4', 1, 200000, 38000, 238000],
@@ -153,7 +204,7 @@ resumen_data = {
 }
 df_resumen = pd.DataFrame(resumen_data)
 
-excel_path = 'd:/Data Science/GitHub/PET - v1/presupuesto_clinica_mejorado_13.xlsx'
+excel_path = 'd:/Data Science/GitHub/PET - v1/Estudios/Presupuestos/presupuesto_clinica_mejorado_13.xlsx'
 with pd.ExcelWriter(excel_path, engine='openpyxl') as writer:
     df_resumen.to_excel(writer, sheet_name='RESUMEN EJECUTIVO', index=False)
     df_capex_completo.to_excel(writer, sheet_name='INVERSIÓN DETALLADA', index=False)

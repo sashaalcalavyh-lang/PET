@@ -381,3 +381,21 @@ Agregar al dashboard en la pestaÃ±a 3 el resumen de factores de fracaso, estacio
  -   * * V a l i d a c i ó n : * *   E s   r e a l i s t a   s i   e l   m a r g e n   b r u t o   s u b e   a l   7 5 - 8 0 %   r e t e n i e n d o   s e r v i c i o s   i n - h o u s e   ( e j .   l a b o r a t o r i o   y   c i r u g í a s   c o m p l e j a s ) . 
   
  
+**Solicitud:**
+Cargo	Modalidad Legal	Sueldo Base (Cálculo)	Retiro de Socia (Libre Imp.)	Ingreso Líquido (Bolsillo)	Costo Empresa			
+Daniela (Socia Directora Médica)25hrs laborales a la semana	Contrato Trabajo	Sueldo Mínimo $395.395+ Gratificación mensual   	Variable para cuadrar a $1.7M	$1.700.000	Sueldo Bruto + Retiro de Socia (Libre Imp.)			
+Sasha (Socia Recepción) 30hrs laborales xsemana	Contrato Trabajo	Sueldo Mínimo $395.395+ Gratificación mensual   	Variable para cuadra a $800.000	$800.000	Sueldo Bruto + Retiro de Socia (Libre Imp.)			
+Médico 2 (Tarde/Sábado) Part-Time 30hrs laborales por semana	Contrato Trabajo	Sueldo Mínimo $395.395+ Gratificación mensual   	N/A	Sueldo Líquido + Comisiones	Sueldo Bruto + Comisiones			
+Médico 3 (Fines de semana)	Boleta de Honorarios	N/A	N/A	100% de la Boleta	valor hora  $5.000 de lunes a lunes.Monto de Boleta Líquida (Médico asume retención)			
+Técnicos (Diurno, Nocturno, FDS)  se llaman segun necesidad	Boleta de Honorarios	N/A	N/A	100% de la Boleta	turno de lunes a lunes valor hora $3.000.Monto de Boleta Líquida (El tecnico asume retención)			
+Recepcionista 2  40hrs laborales por semana	Contrato Trabajo	Sueldo Mínimo $553.553 + Gratificación mensual	N/A	Sueldo Líquido  	Sueldo Bruto 			 
+puedes modificar todo en base a esta nueva nomina: Cargo Modalidad Legal Sueldo Base (Cálculo) Retiro de Socia (Libre Imp.) Ingreso Líquido (Bolsillo) Costo Empresa...
+
+**Solicitud:**
+pero sigo viendo lo mismo y no se modifico nada
+
+**Solicitud:**
+dame el link para acceder
+
+**Solicitud:**
+aqui no se regustro la nueva nomina , sigue apareciendo todo igual
