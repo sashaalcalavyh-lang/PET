@@ -399,3 +399,6 @@ dame el link para acceder
 
 **Solicitud:**
 aqui no se regustro la nueva nomina , sigue apareciendo todo igual
+
+**Solicitud:**
+puedes agregar que abajo de la tabla de nomina se desglose una explicacion de horas laborales...

@@ -265,6 +265,20 @@ with tab2:
                     df_display[col] = df_display[col].apply(lambda x: f"${x:,.0f}".replace(",", ".") if pd.notnull(x) else "")
             
             st.dataframe(df_display, use_container_width=True, hide_index=True)
+            
+            if sheet_name == 'NÓMINA INICIAL (Fase 1)':
+                st.markdown("""
+                <div style='background-color: #1e1e2e; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 0.9em; border-left: 4px solid #4a90e2;'>
+                <b>📌 Detalle y Explicación de Horas Laborales (Estructura Fase 1)</b><br><br>
+                • <b>Daniela (Socia Directora Médica):</b> 25 hrs laborales a la semana. Contrato de Trabajo. El sueldo base ($395.395) corresponde al Sueldo Mínimo Proporcional + Gratificación mensual. El retiro libre de impuestos es variable para cuadrar a un Ingreso Líquido de $1.700.000. El costo empresa asume el sueldo bruto más el retiro.<br>
+                • <b>Sasha (Socia Recepción):</b> 30 hrs laborales por semana. Contrato de Trabajo. El sueldo base ($395.395) corresponde al Sueldo Mínimo Proporcional + Gratificación mensual. El retiro es variable para cuadrar a un Ingreso Líquido de $800.000.<br>
+                • <b>Médico 2 (Tarde/Sábado):</b> Part-Time 30 hrs laborales por semana. Contrato de Trabajo con Sueldo Mínimo Proporcional + Gratificación. El ingreso de bolsillo está compuesto por el sueldo líquido más comisiones variables.<br>
+                • <b>Médico 3 (Fines de semana):</b> Modalidad Boleta de Honorarios. Valor hora $5.000 de lunes a lunes. El prestador recibe el 100% de la boleta y asume su propia retención legal (Monto Boleta Líquida).<br>
+                • <b>Técnicos (Diurno, Nocturno, FDS):</b> Se llaman según necesidad. Boleta de Honorarios. Turno de lunes a lunes con valor hora de $3.000. El técnico asume su propia retención.<br>
+                • <b>Recepcionista 2:</b> 40 hrs laborales por semana. Contrato de Trabajo con Sueldo Mínimo ($553.553) + Gratificación mensual.
+                </div>
+                """, unsafe_allow_html=True)
+
             st.markdown("---")
             
         # Extraer variables dinámicas para el Simulador
